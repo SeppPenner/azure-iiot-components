@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.OpcUa.Testing", "components\opc-ua\src\Microsoft.Azure.IIoT.OpcUa.Testing\src\Microsoft.Azure.IIoT.OpcUa.Testing.csproj", "{C2F3B451-2971-4D8F-AAA2-8481A251AA3F}"
 EndProject
@@ -205,6 +205,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.OpcUa.Vault.Tests", "components\opc-ua\src\Microsoft.Azure.IIoT.OpcUa.Vault\tests\Microsoft.Azure.IIoT.OpcUa.Vault.Tests.csproj", "{77FB3A10-77AB-49E5-A11D-7AD8E382D201}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.Crypto", "common\src\Microsoft.Azure.IIoT.Crypto\src\Microsoft.Azure.IIoT.Crypto.csproj", "{A69DC376-C0E5-4084-8FC8-A69077D92F04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.Services.OpcUa.Alerting", "services\src\Microsoft.Azure.IIoT.Services.OpcUa.Alerting\src\Microsoft.Azure.IIoT.Services.OpcUa.Alerting.csproj", "{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -681,6 +683,12 @@ Global
 		{A69DC376-C0E5-4084-8FC8-A69077D92F04}.Develop|Any CPU.Build.0 = Debug|Any CPU
 		{A69DC376-C0E5-4084-8FC8-A69077D92F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A69DC376-C0E5-4084-8FC8-A69077D92F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D}.Develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D}.Develop|Any CPU.Build.0 = Debug|Any CPU
+		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -779,6 +787,7 @@ Global
 		{33575581-15C8-4560-A768-B441D53A088A} = {A6028EDB-3331-48D2-8C7D-8D681172A61A}
 		{77FB3A10-77AB-49E5-A11D-7AD8E382D201} = {1266F300-8BD2-4F1E-BA88-911F5F3AC36C}
 		{A69DC376-C0E5-4084-8FC8-A69077D92F04} = {FEE95825-2E34-45AF-BDED-52F9C7412BF5}
+		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D} = {ADB416A3-C375-4362-B2C0-3A35DA4CB5F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F09EFCEA-59F6-4A16-9CB6-7E865A3F62D8}
