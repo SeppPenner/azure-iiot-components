@@ -210,6 +210,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.Messaging", "common\src\Microsoft.Azure.IIoT.Messaging\src\Microsoft.Azure.IIoT.Messaging.csproj", "{A70D3201-A306-491A-BE3E-02FFB90CF0A2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.Services.OpcUa.Jobs", "services\src\Microsoft.Azure.IIoT.Services.OpcUa.Jobs\src\Microsoft.Azure.IIoT.Services.OpcUa.Jobs.csproj", "{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -697,6 +699,12 @@ Global
 		{A70D3201-A306-491A-BE3E-02FFB90CF0A2}.Develop|Any CPU.Build.0 = Debug|Any CPU
 		{A70D3201-A306-491A-BE3E-02FFB90CF0A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A70D3201-A306-491A-BE3E-02FFB90CF0A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081}.Develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081}.Develop|Any CPU.Build.0 = Debug|Any CPU
+		{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -797,6 +805,7 @@ Global
 		{A69DC376-C0E5-4084-8FC8-A69077D92F04} = {FEE95825-2E34-45AF-BDED-52F9C7412BF5}
 		{EAC5FCE7-A5D7-4003-85AE-481A5CAE754D} = {ADB416A3-C375-4362-B2C0-3A35DA4CB5F8}
 		{A70D3201-A306-491A-BE3E-02FFB90CF0A2} = {FEE95825-2E34-45AF-BDED-52F9C7412BF5}
+		{98CC86E7-6BD0-4B5A-B71B-C8F57C98E081} = {ADB416A3-C375-4362-B2C0-3A35DA4CB5F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F09EFCEA-59F6-4A16-9CB6-7E865A3F62D8}
