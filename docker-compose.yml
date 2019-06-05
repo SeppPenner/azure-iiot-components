@@ -108,7 +108,7 @@ services:
       context: ./services
       dockerfile: ./src/Microsoft.Azure.IIoT.Services.OpcUa.Vault/docker/Dockerfile
     ports:
-      - "58801:58801"
+      - "9044:9044"
     environment:
       - PCS_KEYVAULT_URL
       - PCS_SERVICEBUS_CONNSTRING
