@@ -21,7 +21,4 @@
 	url = https://github.com/Azure/azure-iiot-opc-twin-webui.git
 [submodule "samples/opc-vault-webui"]
 	path = samples/opc-vault-webui
-	url = https://github.com/Azure/azure-iiot-opc-vault-service
-[submodule "modules/opc-gds"]
-	path = modules/opc-gds
-	url = https://github.com/Azure/iot-edge-opc-gds
+	url = https://github.com/Azure/azure-iiot-opc-vault-service.git

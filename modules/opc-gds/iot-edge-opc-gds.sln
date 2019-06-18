@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8289AFAE-0933-40EF-9D19-6FFA2DB04837}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.IIoT.OpcUa.Modules.Vault", "src\Microsoft.Azure.IIoT.OpcUa.Modules.Vault.csproj", "{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF4C05A0-7A45-4830-88FB-E78C29F9BC41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Develop|Any CPU = Develop|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{057DEFF7-EDDE-4AE9-8C80-7DFBB88492C7} = {EF4C05A0-7A45-4830-88FB-E78C29F9BC41}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F947AAE7-2D6B-43C0-B5E6-824B8E4D7992}
+	EndGlobalSection
+EndGlobal
