@@ -20,8 +20,9 @@ services:
     ports:
       - "9042:9042"
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
       - PCS_IOTHUB_CONNSTRING
+      - PCS_SERVICEBUS_CONNSTRING
       - PCS_TELEMETRY_DOCUMENTDB_CONNSTRING
       - PCS_AUTH_REQUIRED
       - PCS_AUTH_ISSUER
@@ -36,7 +37,8 @@ services:
       context: ./services
       dockerfile: ./src/Microsoft.Azure.IIoT.Services.OpcUa.Onboarding/docker/Dockerfile
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
+      - PCS_SERVICEBUS_CONNSTRING
       - PCS_IOTHUB_CONNSTRING
       - PCS_IOTHUBREACT_HUB_ENDPOINT
       - PCS_IOTHUBREACT_HUB_PARTITIONS
@@ -53,7 +55,7 @@ services:
     ports:
       - "9041:9041"
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
       - PCS_IOTHUB_CONNSTRING
       - PCS_TELEMETRY_DOCUMENTDB_CONNSTRING
       - PCS_AUTH_REQUIRED
@@ -71,7 +73,7 @@ services:
     ports:
       - "9043:9043"
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
       - PCS_IOTHUB_CONNSTRING
       - PCS_TELEMETRY_DOCUMENTDB_CONNSTRING
       - PCS_AUTH_REQUIRED
@@ -90,7 +92,26 @@ services:
       - "9040:9040"
       - "51111:51111"
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
+      - PCS_IOTHUB_CONNSTRING
+      - PCS_TELEMETRY_DOCUMENTDB_CONNSTRING
+      - PCS_AUTH_REQUIRED
+      - PCS_AUTH_ISSUER
+      - PCS_AUTH_AUDIENCE
+      - PCS_WEBUI_AUTH_AAD_APPID
+      - PCS_WEBUI_AUTH_AAD_AUTHORITY
+      - PCS_WEBUI_AUTH_AAD_TENANT
+      - PCS_CORS_WHITELIST
+  vaultservice:
+    image: ${REPOSITORY:-localhost:5000/azure-iiot-}opc-vault-service:${IMAGE_VERSION:-latest}
+    build: 
+      context: ./services
+      dockerfile: ./src/Microsoft.Azure.IIoT.Services.OpcUa.Vault/docker/Dockerfile
+    ports:
+      - "9044:9044"
+    environment:
+      - PCS_KEYVAULT_URL
+      - PCS_SERVICEBUS_CONNSTRING
       - PCS_IOTHUB_CONNSTRING
       - PCS_TELEMETRY_DOCUMENTDB_CONNSTRING
       - PCS_AUTH_REQUIRED
@@ -106,7 +127,8 @@ services:
       context: ./services
       dockerfile: ./src/Microsoft.Azure.IIoT.Services.OpcUa.Processor/docker/Dockerfile
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
+      - PCS_SERVICEBUS_CONNSTRING
       - PCS_TELEMETRY_DOCUMENTDB_CONNSTRING
       - PCS_IOTHUB_CONNSTRING
       - PCS_IOTHUBREACT_HUB_ENDPOINT
@@ -122,7 +144,8 @@ services:
       context: ./services
       dockerfile: ./src/Microsoft.Azure.IIoT.Services.Notification.Blob/docker/Dockerfile
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
+      - PCS_SERVICEBUS_CONNSTRING
       - PCS_IOTHUB_CONNSTRING
       - PCS_IOTHUBREACT_HUB_ENDPOINT
       - PCS_IOTHUBREACT_HUB_PARTITIONS
@@ -147,27 +170,6 @@ services:
       - REACT_APP_PCS_WEBUI_AUTH_AAD_TENANT
       - REACT_APP_PCS_TWIN_REGISTRY_URL=http://localhost:10080/registry
       - REACT_APP_PCS_TWIN_SERVICE_URL=http://localhost:10080/twin
-  vaultservice:
-    image: ${REPOSITORY:-localhost:5000/azure-iiot-}opc-vault-service:${IMAGE_VERSION:-latest}
-    build: 
-      context: ./services
-      dockerfile: ./src/Microsoft.Azure.IIoT.Services.OpcUa.Vault/docker/Dockerfile
-    ports:
-      - "58801:58801"
-    environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
-      - OPC_VAULT_KEYVAULT_RESOURCE_ID
-      - OPC_VAULT_KEYVAULT_URI
-      - OPC_VAULT_COSMOSDB_CONNSTRING
-      - PCS_IOTHUB_CONNSTRING
-      - PCS_TELEMETRY_DOCUMENTDB_CONNSTRING
-      - PCS_AUTH_REQUIRED
-      - PCS_AUTH_ISSUER
-      - PCS_AUTH_AUDIENCE
-      - PCS_WEBUI_AUTH_AAD_APPID
-      - PCS_WEBUI_AUTH_AAD_AUTHORITY
-      - PCS_WEBUI_AUTH_AAD_TENANT
-      - PCS_CORS_WHITELIST
   vaultwebui:
     image: ${REPOSITORY:-localhost:5000/azure-iiot-}opc-vault-webui:${IMAGE_VERSION:-latest}
     build: ./samples/opc-vault-webui
@@ -198,7 +200,7 @@ services:
     cap_add:
       - NET_ADMIN
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
       - PCS_IOTHUB_CONNSTRING
   publishermodule:
     image: ${REPOSITORY:-localhost:5000/azure-iiot-}opc-publisher:${IMAGE_VERSION:-latest}
@@ -236,7 +238,7 @@ services:
     build: ./api
     command: exit
     environment:
-      - PCS_KEYVAULT_CONFIGURATION_URI
+      - PCS_KEYVAULT_URL
       - PCS_TWIN_REGISTRY_URL=http://twinregistry:9042
       - PCS_TWIN_SERVICE_URL=http://twinservice:9041
       - PCS_WEBUI_AUTH_AAD_APPID

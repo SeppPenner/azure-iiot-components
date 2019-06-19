@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <Product>Azure IoT Edge Global Discovery Service Module</Product>
+    <RepositoryUrl>https://github.com/Azure/iot-edge-opc-gds</RepositoryUrl>
+    <PackageTags>Industrial;Manufacturing;OPC;OPCUA;Azure;IoT;IIoT;Certificate;OpcVault;GDS;.NET</PackageTags>
+  </PropertyGroup>
+</Project>
