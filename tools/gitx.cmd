@@ -10,7 +10,6 @@ set current-path=%current-path:~0,-1%
 set repo-root=%current-path%\..
 
 set submodules=%submodules% modules\opc-twin
-set submodules=%submodules% modules\opc-gds
 set submodules=%submodules% modules\opc-publisher
 set submodules=%submodules% components\opc-ua
 set submodules=%submodules% samples\opc-twin-webui
