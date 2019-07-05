@@ -48,7 +48,10 @@ namespace Opc.Ua.Gds.Server.OpcVault {
             _azureADOptions = azureADOptions;
         }
 
-        public override void InitializeServiceClient<T>(ServiceClient<T> client) => InternalInitializeServiceClient();
+        public override void InitializeServiceClient<T>(ServiceClient<T> client) {
+            InternalInitializeServiceClient();
+        }
+
         private void InternalInitializeServiceClient() {
             var authenticationContext =
                 new AuthenticationContext(

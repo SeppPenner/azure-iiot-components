@@ -22,13 +22,21 @@ namespace Opc.Ua.Gds.Server.OpcVault {
             TrustedCertificates = new X509Certificate2Collection();
         }
 
-        public void AddIssuerCertificates(X509Certificate2CollectionApiModel model) => AddCertificates(IssuerCertificates, model);
+        public void AddIssuerCertificates(X509Certificate2CollectionApiModel model) {
+            AddCertificates(IssuerCertificates, model);
+        }
 
-        public void AddIssuerCrls(X509CrlCollectionApiModel model) => AddCrls(IssuerCrls, model);
+        public void AddIssuerCrls(X509CrlCollectionApiModel model) {
+            AddCrls(IssuerCrls, model);
+        }
 
-        public void AddTrustedCertificates(X509Certificate2CollectionApiModel model) => AddCertificates(TrustedCertificates, model);
+        public void AddTrustedCertificates(X509Certificate2CollectionApiModel model) {
+            AddCertificates(TrustedCertificates, model);
+        }
 
-        public void AddTrustedCrls(X509CrlCollectionApiModel model) => AddCrls(TrustedCrls, model);
+        public void AddTrustedCrls(X509CrlCollectionApiModel model) {
+            AddCrls(TrustedCrls, model);
+        }
 
         public X509Certificate2Collection IssuerCertificates { get; }
         public IList<Opc.Ua.X509CRL> IssuerCrls { get; }

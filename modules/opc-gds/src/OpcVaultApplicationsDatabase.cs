@@ -45,7 +45,7 @@ namespace Opc.Ua.Gds.Server.Database.OpcVault {
 
             var applicationModel = new ApplicationRecordApiModel(
                 ApplicationState.New,
-(Microsoft.Azure.IIoT.OpcUa.Api.Vault.v1.Models.ApplicationType)(ApplicationType)application.ApplicationType,
+(Microsoft.Azure.IIoT.OpcUa.Api.Vault.v1.Models.ApplicationType)application.ApplicationType,
                 applicationId
                 ) {
                 ApplicationUri = application.ApplicationUri,

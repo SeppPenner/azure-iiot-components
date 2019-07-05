@@ -28,7 +28,9 @@ namespace Opc.Ua.Gds.Server.OpcVault {
         #region ICertificateGroupProvider
         public override CertificateGroup Create(
             string storePath,
-            CertificateGroupConfiguration certificateGroupConfiguration) => new OpcVaultCertificateGroup(_opcVaultHandler, storePath, certificateGroupConfiguration);
+            CertificateGroupConfiguration certificateGroupConfiguration) {
+            return new OpcVaultCertificateGroup(_opcVaultHandler, storePath, certificateGroupConfiguration);
+        }
 
         public override async Task Init() {
             Utils.Trace(Utils.TraceMasks.Information, "InitializeCertificateGroup: {0}", m_subjectName);
@@ -142,7 +144,9 @@ namespace Opc.Ua.Gds.Server.OpcVault {
 
         public override Task<X509Certificate2> CreateCACertificateAsync(
             string subjectName
-            ) => throw new NotImplementedException("CA creation not supported with OpcVault. Certificate is created and managed by OpcVault administrator.");
+            ) {
+            throw new NotImplementedException("CA creation not supported with OpcVault. Certificate is created and managed by OpcVault administrator.");
+        }
 
         /// <summary>
         /// Compares the signed cert Issuer with the local issuer, updates local issuer if necessary.

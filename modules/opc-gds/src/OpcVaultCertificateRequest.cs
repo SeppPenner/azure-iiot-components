@@ -185,7 +185,9 @@ namespace Opc.Ua.Gds.Server.OpcVault {
             out string subjectName,
             out string[] domainNames,
             out string privateKeyFormat,
-            out string privateKeyPassword) => throw new NotImplementedException();
+            out string privateKeyPassword) {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

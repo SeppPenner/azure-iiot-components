@@ -10,7 +10,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
-using Microsoft.Azure.IIoT.OpcUa.Api.Vault;
 using Microsoft.Azure.IIoT.OpcUa.Api.Vault.v1;
 using Mono.Options;
 using Opc.Ua.Configuration;
